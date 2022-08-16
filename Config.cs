@@ -16,5 +16,8 @@ namespace WarheadCustomColor
 
         [Description("How long the lights are off after detonation in seconds")]
         public float WarheadBlackoutDelay { get; set; } = 2f;
+
+        [Description("Divide variable")] 
+        public float DivideValue { get; set; } = 50f;
     }
 }

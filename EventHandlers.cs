@@ -25,7 +25,7 @@ namespace WarheadCustomColor
 
         internal void OnWarheadStarting(StartingEventArgs ev)
         {
-            Color targetColor = (Vector4)Plugin.Instance.Config.WarheadColor / 25.5f;
+            Color targetColor = (Vector4)Plugin.Instance.Config.WarheadColor / Plugin.Instance.Config.DivideValue;
             foreach (var room in Room.List)
                 room.Color = targetColor;
         }
