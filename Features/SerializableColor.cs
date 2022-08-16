@@ -9,14 +9,15 @@ namespace WarheadCustomColor.Features
         {
             
         }
-        public SerializableColor(byte r, byte g, byte b)
+        public SerializableColor(byte r, byte g, byte b, byte w)
         {
             R = r;
             G = g;
             B = b;
+            W = w;
         }
 
-        public SerializableColor(Vector3 color): this((byte)color.x, (byte)color.y, (byte)color.z){}
+        public SerializableColor(Vector4 color): this((byte)color.x, (byte)color.y, (byte)color.z, (byte)color.w){}
 
         /// <summary>
         /// Red color
@@ -32,8 +33,13 @@ namespace WarheadCustomColor.Features
         /// </summary>
         public byte B { get; set; } = 0;
         
+        /// <summary>
+        /// Brightness color
+        /// </summary>
+        public byte W { get; set; } = 0;
+        
         public static implicit operator Color(SerializableColor a) => new Color(a.R, a.G, a.B);
-        public static implicit operator Vector3(SerializableColor a) => new Vector3(a.R, a.G, a.B);
-        public static explicit operator SerializableColor(Vector3 a) => new SerializableColor(a);
+        public static implicit operator Vector4(SerializableColor a) => new Vector4(a.R, a.G, a.B, a.W);
+        public static explicit operator SerializableColor(Vector4 a) => new SerializableColor(a);
     }
 }

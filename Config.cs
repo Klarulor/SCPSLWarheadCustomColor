@@ -12,7 +12,7 @@ namespace WarheadCustomColor
         public bool IsEnabled { get; set; } = true;
 
         [Description("Warhead color 0-255")]
-        public SerializableColor WarheadColor { get; set; } = new SerializableColor(120, 60, 80);
+        public SerializableColor WarheadColor { get; set; } = new SerializableColor(120, 60, 80, 1);
 
         [Description("How long the lights are off after detonation in seconds")]
         public float WarheadBlackoutDelay { get; set; } = 2f;
