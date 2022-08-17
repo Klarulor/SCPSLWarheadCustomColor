@@ -27,7 +27,10 @@ namespace WarheadCustomColor
         {
             Color targetColor = (Vector4)Plugin.Instance.Config.WarheadColor / Plugin.Instance.Config.DivideValue;
             foreach (var room in Room.List)
+            {
                 room.Color = targetColor;
+                room.LightIntensity = Plugin.Instance.Config.LightIntensity;
+            }
         }
 
         internal void OnWarheadStopping(StoppingEventArgs ev)

@@ -19,5 +19,8 @@ namespace WarheadCustomColor
 
         [Description("Divide variable")] 
         public float DivideValue { get; set; } = 50f;
+
+        [Description("Light intensity")] 
+        public float LightIntensity { get; set; } = 1;
     }
 }
